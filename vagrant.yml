@@ -1,0 +1,10 @@
+---
+:synced_folder:
+  :localpath: /Users/bwlively/Documents/dev-env-talk
+  :guestpath: /vagrant_data
+:hardware:
+  :cpus: 4
+  :memory: 4096
+:proxies:
+  :https:
+  :http:
