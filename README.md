@@ -10,7 +10,7 @@
     - Vagrant/Packer (configured system images)
 * Tools for configuration
     - To make sure all envs are configured the same way, you might be using some of these tools:
-        - Chef
+        - Chef => Ruby program to 
         - Puppet
         - Docker
         - custom scripting!
@@ -18,9 +18,8 @@
 ## Vagrant with VirtualBox
 Vagrant uses other virtual machine providers (like VirtualBox, Parallels, or AWS) to create customized virtual machines. 
 Can configure OS, # CPUs, Memory, Disk, shared directories (with your local machine), open/closed ports, custom IPs, etc.
-* Install VirtualBox
-* Install Vagrant
-* Install Chef DK
+* Install VirtualBox => https://www.virtualbox.org/wiki/Downloads
+* Install Vagrant => https://www.vagrantup.com/downloads.html
 * `$ mkdir my-dev-env`
 * `$ cd my-dev-env`
 * `$ vagrant init`
