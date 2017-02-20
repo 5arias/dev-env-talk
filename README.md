@@ -10,7 +10,7 @@
     - Vagrant/Packer (configured system images)
 * Tools for configuration
     - To make sure all envs are configured the same way, you might be using some of these tools:
-        - Chef => Ruby program to
+        - Chef
         - Puppet
         - Docker
         - custom scripting!
@@ -24,11 +24,32 @@ Can configure OS, # CPUs, Memory, Disk, shared directories (with your local mach
 * `$ cd my-dev-env`
 * `$ vagrant init`
 * build your Vagrantfile (see example)
+  - Vagrantfile is written in Ruby.
+* customize your configuration in vagrant.yml (your team might not use this)
+  - Externalizing custom configuration from the Vagrantfile allows for continuity when your team makes changes to Vagrant configuration.
+  - `synced_folder` needs correct `localpath` and `guestpath` to use our Ruby config in the Vagrantfile.
+  - proxies may be used if you are working with a VPN
+  - you may beef up your VM by increasing the CPUs and memory if you need.
+    - Vagrant / VirtualBox reserve can reserve resources on your machine. Disk space is used as needed unless an upper-bound is provided.
+    - Resources should be tuned to reflect the production environment for your application, or can be used to reduce the load on your local system if you are
+    running on less performant hardware like a Macbook Air or similar machine.
 * `$ vagrant up` and wait... it is probably downloading Ubuntu...
 * `$ vagrant ssh` and you're in.
+* `$ cd /vagrant_data/` to see your shared folders.
 
-* Basic Vagrant commands:
-    -
+### Workflow
+  * After starting and connecting to your machine, navigate to the working directory (/vagrant_data)
+  * start your application in development mode, or whatever it is you do.
+    - You may need to install any dependencies (`bundle install`, `npm install`, etc) first.
+    - Your team will probably have truly external dependencies (correct versions of languages, package managers, system software, etc.) managed in by a tool like Chef, Puppet, or build scripts that are invoked by the Vagrantfile (same in Dockerfile)
+  * On your local machine, open the same directory with your IDE or favorite text editor.
+    - Many teams have preferred IDEs or text editors for their projects and may have customized configurations you can use :)
+  * You will be working directly on your local machine. Changes will be immediately picked up by the VM because folders are shared.
+  * Any tests, compilers, or dev servers should be run on your VM.
+  * Your local machine should only be used to run your IDE/editor and manage the git repo.
+    - If you set up your VM with your GitHub credentials, you can manage git from either machine.
+
+### Basic Vagrant commands:
     - `vagrant init` #=> creates a Vagrantfile in your directory,
     - `vagrant up` #=> starts your VM
     - `vagrant ssh` #=> connects to your VM via SSH. Can have many connections.
@@ -42,7 +63,7 @@ Can configure OS, # CPUs, Memory, Disk, shared directories (with your local mach
 - Docker is NOT a VM, it is a collection of filesystem images layerd on top of each other and sharing resources. The base Docker image is a barebones Linux kernel. Everything else is added as needed.
 
 ![Virtual Machine Comparison with Containers](/images/vms_vs_containers.png "Virtual Machines and Containers - Credit: www.docker.com")
- 
+
 - With Docker, you can create a single `Container`  of your application and dependencies, including the necessary parts of the filesystem. You can then drop the container or into any compatible environment (Linux, or Windows/OSX with the Docker app installed) and run it the same way without worry.
 - Network settings allow you to create a docker network where you can run containers for different microservices on the same network.
 - Reduced overhead for configuration has led to it becoming very popular
@@ -52,7 +73,7 @@ Can configure OS, # CPUs, Memory, Disk, shared directories (with your local mach
   - [Mac OS: Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
   - [Windows: Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
   - [Linux](https://docs.docker.com/engine/installation/linux/)
-  
+
 ### Basic Docker / Docker Compose commands:
   - `docker-compose build`            : Build or rebuild services
   - `docker-compose up`               : Create and start containers
