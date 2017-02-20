@@ -38,15 +38,15 @@ Can configure OS, # CPUs, Memory, Disk, shared directories (with your local mach
 
 ## Docker
 ### What is Docker?
-    - Docker is a tool for layering application resources in a modular fashion to minimize disk space
-    and improve your app's portability.
-    - Docker is NOT a VM, it is a collection of filesystem images layerd on top of each other and sharing resources.
-    The base Docker image is a barebones Linux kernel. Everything else is added as needed.
-    ![Virtual Machine Comparison with Containers](/images/vms_vs_containers.png "Virtual Machines and Containers - Credit: www.docker.com")
-    - With Docker, you can create a single `Container`  of your application and dependencies, including the necessary parts of the filesystem. You can then drop the container or into any compatible environment (Linux, or Windows/OSX with the Docker app installed) and run it the same way without worry.
-    - Network settings allow you to create a docker network where you can run containers for different microservices on the same network.
-    - Reduced overhead for configuration has led to it becoming very popular
-    - Docker is fast to build. It relies on `images` either stored in the Docker Hub or built locally by you to quickly rebuild containers
+- Docker is a tool for layering application resources in a modular fashion to minimize disk space and improve your app's portability.
+- Docker is NOT a VM, it is a collection of filesystem images layerd on top of each other and sharing resources. The base Docker image is a barebones Linux kernel. Everything else is added as needed.
+
+![Virtual Machine Comparison with Containers](/images/vms_vs_containers.png "Virtual Machines and Containers - Credit: www.docker.com")
+ 
+- With Docker, you can create a single `Container`  of your application and dependencies, including the necessary parts of the filesystem. You can then drop the container or into any compatible environment (Linux, or Windows/OSX with the Docker app installed) and run it the same way without worry.
+- Network settings allow you to create a docker network where you can run containers for different microservices on the same network.
+- Reduced overhead for configuration has led to it becoming very popular
+- Docker is fast to build. It relies on `images` either stored in the Docker Hub or built locally by you to quickly rebuild containers
 
 ### Install Docker
   - [Mac OS: Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
