@@ -50,6 +50,7 @@ Can configure OS, # CPUs, Memory, Disk, shared directories (with your local mach
     - If you set up your VM with your GitHub credentials, you can manage git from either machine.
 
 ### Basic Vagrant commands:
+  * Vagrant documentation: https://www.vagrantup.com/docs/
     - `vagrant init` #=> creates a Vagrantfile in your directory,
     - `vagrant up` #=> starts your VM
     - `vagrant ssh` #=> connects to your VM via SSH. Can have many connections.
