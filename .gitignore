@@ -1,0 +1,54 @@
+/.bundle
+/tmp
+/db
+/vendor
+/coverage
+/public/*
+/public/**/*
+.env
+/.vagrant/**/*
+
+# Ignore log files
+.log
+/log/*
+!/log/.keep
+
+# Ignore OS X files
+.DS_Store
+
+# Ignore Certificate and Private Key files
+*.cer
+*.pem
+
+# Ignore sublime text project and workspace files
+*.sublime-project
+*.sublime-workspace
+
+# Ignore WSDL documents
+*.wsdl
+
+# Ignore RubyMine files
+*.ideafig --global core.excludesfile '~/.gitignore_global'
+*.idea
+
+# Ignore for Eclipse
+.classpath
+.project
+
+# Ignore for VS Code
+.vscode/chrome/
+
+# Ignore NPM Node Modules
+*/node_modules
+node_modules
+
+# tagging file for atom text editor is project specific and should not be governed by version control
+tags
+gems.tags
+Guardfile
+.eslintrc
+
+# npm
+npm-debug.log
+dist/
+log/
