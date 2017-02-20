@@ -6,6 +6,9 @@
 /public/*
 /public/**/*
 .env
+
+# Vagrantfile should be ignored, as well as all related files specific to your system.
+Vagrantfile
 /.vagrant/**/*
 
 # Ignore log files
