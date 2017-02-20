@@ -4,7 +4,7 @@
     - Your hardware does not match the server's.
     - To be certain of performance and **configuration** we develop on environments
     as close to the deployed environment as possible.
-* Tools your app probably is depolyed with (not mutually exclusive):
+* Tools your app probably is deployed with (not mutually exclusive):
     - Amazon Web Services (AWS)
     - Docker / Docker Compose
     - Vagrant/Packer (configured system images)
