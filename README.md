@@ -59,6 +59,9 @@ Can configure OS, # CPUs, Memory, Disk, shared directories (with your local mach
     - `vagrant destroy` #=> removes VM (!)
 
 ## Docker
+- [Docker Documentation](https://docs.docker.com/)
+- [Docker Tutorial](https://docs.docker.com/engine/getstarted/)
+
 ### What is Docker?
 - Docker is a tool for layering application resources in a modular fashion to minimize disk space and improve your app's portability.
 - Docker is NOT a VM, it is a collection of filesystem images layerd on top of each other and sharing resources. The base Docker image is a barebones Linux kernel. Everything else is added as needed.
