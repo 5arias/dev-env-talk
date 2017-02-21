@@ -10,8 +10,8 @@
     - Vagrant/Packer (configured system images)
 * Tools for configuration
     - To make sure all envs are configured the same way, you might be using some of these tools:
-        - Chef
-        - Puppet
+        - Chef - https://www.chef.io/chef/
+        - Puppet - https://puppet.com/product
         - Docker
         - custom scripting!
 
